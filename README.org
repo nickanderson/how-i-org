@@ -1,0 +1,6 @@
+#+Title: How I Org
+
+This is the [[file:presentation.org][presentation]] and source material for a talk about how to organize
+yourself.
+
+

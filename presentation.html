@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>How I Org</title>
+<meta name="author" content="(Kristian Amlie & Nick Anderson)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="file:///home/nickanderson/src/reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="file:///home/nickanderson/src/reveal.js/css/theme/white.css" id="theme"/>
+
+<link rel="stylesheet" href="file:///home/nickanderson/src/reveal.js/lib/css/zenburn.css"/>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'file:///home/nickanderson/src/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<meta name="description" content="How to organize yourself">
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>How I Org</h2><h3></h3><h4>Northern.tech winter summit 2018</h4>
+</section>
+
+<section>
+<section id="slide-org2ef72d2">
+<h2 id="org2ef72d2">30k foot view</h2>
+<ul>
+<li>The master of time boxing</li>
+<li>Prioritization maestro</li>
+<li>The most disciplined man in the world</li>
+
+</ul>
+
+<p>
+Kristian
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgcd3a50d">
+<h2 id="orgcd3a50d"><a id="ID-175015ae-14e0-4545-9d7c-3308d0a8f55f"></a>Tooling</h2>
+
+<div class="figure">
+<p><img src="data/17/5015ae-14e0-4545-9d7c-3308d0a8f55f/6163066070_c71b223d09_b_d_2018-02-23_12-24-00.jpg" alt="6163066070_c71b223d09_b_d_2018-02-23_12-24-00.jpg" width="100%" />
+</p>
+</div>
+
+<aside class="notes">
+<p>
+I spend the majority of my writing time inside of org-mode. I usually export
+my org formatted text to html, markdown, or jira.
+</p>
+
+<p>
+The center of my org is <code>refile.org</code>. This is where my org notes started when
+I first started playing with orgmode about 8 years ago when I first discovered
+org-mode and was reading <a href="http://doc.norang.ca/org-mode.html">Organize Your Life In Plain Text!</a>
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-org583fb1f">
+<h3 id="org583fb1f"><a id="ID-9b0aa346-f8b4-4880-92bc-cd9886ce64fe"></a>Spacemacs</h3>
+
+<div class="figure">
+<p><object type="image/svg+xml" data="data/9b/0aa346-f8b4-4880-92bc-cd9886ce64fe/spacemacs-logo_2018-02-23_12-27-45.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+</div>
+
+<aside class="notes">
+<p>
+I am a long time vim user and my muscle memory for modal editing is strong.
+The main reason I kept leaving orgmode was because I was uncomfortable inside
+emacs. Once I got evil working nicely in emacs org-mode became a central part
+of my workflow.
+</p>
+
+<p>
+I switched to spacemacs in 2016 which greatly simplified my emacs
+configuration and made integrating orgmode into more areas of my workflow.
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-org359a220">
+<h2 id="org359a220">Features</h2>
+<div class="outline-text-2" id="text-org359a220">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org326f746">
+<h3 id="org326f746">Markup</h3>
+<ul>
+<li class="fragment appear">Similar to markdown</li>
+
+</ul>
+<ul>
+<li class="fragment appear">Slightly less readable (more options)</li>
+
+</ul>
+
+<ul>
+<li class="fragment appear">Fair support rendering in github/gitlab</li>
+
+</ul>
+
+<ul>
+<li class="fragment appear">TROLLING <a href="http://karl-voit.at/2017/09/23/orgmode-as-markup-only/">The most reasonable markup language for text</a>?</li>
+
+</ul>
+
+</section>
+<section id="slide-org32c525f">
+<h4 id="org32c525f">Org Markup Example</h4>
+<pre class="example">
+* Headings start with a star
+
+** Subheadings start with 2 stars
+
+Text can be *bold*, /italic/, +struk through+ or =verbatium=.
+
+#+BEGIN_EXAMPLE
+You can have verbatium blocks
+#+END_EXAMPLE
+
+: This is another way to do verbatium blocks
+: I prefer the BEGIN/END style because of easy templates
+: &lt;s, &lt;e, &lt;q
+</pre>
+
+</section>
+</section>
+<section>
+<section id="slide-org043aec2">
+<h3 id="org043aec2">Inline Code Execution</h3>
+<p>
+Execute code blocks (shell, python, <a href="https://github.com/nickanderson/ob-cfengine3">CFEngine 3</a>) directly inline
+</p>
+
+</section>
+<section id="slide-orgb8fcb24">
+<h4 id="orgb8fcb24">Shell</h4>
+<div class="org-src-container">
+<label class="org-src-name">Executing a shell block</label>
+<pre><code class="shell" >echo Hello World
+</code></pre>
+</div>
+
+<pre class="example">
+Hello World
+
+</pre>
+
+</section>
+<section id="slide-orgc82f52d">
+<h4 id="orgc82f52d">Python</h4>
+<pre class="example">
+#+Caption: Executing a python block
+#+BEGIN_SRC python :exports both :results output
+  print("Hello World")
+#+END_SRC
+</pre>
+
+<pre class="example">
+Hello World
+
+</pre>
+
+</section>
+<section id="slide-org063d790">
+<h4 id="org063d790">CFEngine 3</h4>
+<div class="org-src-container">
+<label class="org-src-name">Executing a CFEngine 3 policy block</label>
+<pre><code class="cfengine3" >bundle agent main
+{
+  reports: "Hello World";
+}
+</code></pre>
+</div>
+
+<pre class="example">
+R: Hello World
+
+</pre>
+
+</section>
+<section id="slide-org457dd96">
+<h4 id="org457dd96">Remote execution</h4>
+<div class="org-src-container">
+
+<pre><code class="sh" >hostname
+uname -a 
+</code></pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org9fa9576">
+<h3 id="org9fa9576">GTD</h3>
+<div class="outline-text-3" id="text-org9fa9576">
+</div>
+</section>
+<section id="slide-org8fcb9d3">
+<h4 id="org8fcb9d3">Capturing</h4>
+</section>
+<section id="slide-orgcc62626">
+<h4 id="orgcc62626">Time Tracking</h4>
+</section>
+<section id="slide-orgd76a2b5">
+<h4 id="orgd76a2b5"><span class="todo TODO">TODO</span> s</h4>
+</section>
+<section id="slide-orgcebb025">
+<h4 id="orgcebb025">Jira</h4>
+<ul>
+<li class="fragment appear"><code>org-jira-get-issue</code></li>
+<li class="fragment appear"><code>org-jira-create-issue</code></li>
+<li class="fragment appear"><code>org-jira-todo-to-jira</code></li>
+<li class="fragment appear"><code>org-jira-browse-issue</code></li>
+<li class="fragment appear"><code>org-jira-update-comment</code></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org9f341fe">
+<h3 id="org9f341fe">Remembering</h3>
+<div class="outline-text-3" id="text-org9f341fe">
+</div>
+</section>
+<section id="slide-orgffe43aa">
+<h4 id="orgffe43aa">Notes</h4>
+</section>
+<section id="slide-orga7b5f26">
+<h4 id="orga7b5f26">Journaling</h4>
+</section>
+<section id="slide-org5de9bc6">
+<h4 id="org5de9bc6">Cross References</h4>
+
+</section>
+</section>
+<section>
+<section id="slide-orgb6b1ce7">
+<h3 id="orgb6b1ce7">Terminals</h3>
+</section>
+</section>
+<section>
+<section id="slide-orgf8fc0c7">
+<h3 id="orgf8fc0c7">Magical Magit</h3>
+</section>
+</section>
+<section>
+<section id="slide-org753e899">
+<h3 id="org753e899">Communicating</h3>
+<div class="outline-text-3" id="text-org753e899">
+</div>
+</section>
+<section id="slide-org2ab6b28">
+<h4 id="org2ab6b28">Email</h4>
+</section>
+<section id="slide-org6558fdb">
+<h4 id="org6558fdb">Presentations</h4>
+</section>
+<section id="slide-org76b6ec6">
+<h4 id="org76b6ec6">Chat</h4>
+</section>
+<section id="slide-orgaba8ef2">
+<h4 id="orgaba8ef2">Blogging</h4>
+
+</section>
+</section>
+<section>
+<section id="slide-orgb0f83f6">
+<h3 id="orgb0f83f6">Additional References</h3>
+<p>
+Some good resources to explore.
+</p>
+
+</section>
+<section id="slide-orgb129ba5">
+<h4 id="orgb129ba5">Literate DevOps</h4>
+<ul>
+<li><a href="http://www.howardism.org/Technical/Emacs/literate-devops.html">http://www.howardism.org/Technical/Emacs/literate-devops.html</a></li>
+<li><a href="http://www.howardism.org/Technical/Emacs/literate-devops-examples.html">http://www.howardism.org/Technical/Emacs/literate-devops-examples.html</a></li>
+<li><a href="https://www.youtube.com/watch?v=dljNabciEGg">https://www.youtube.com/watch?v=dljNabciEGg</a></li>
+
+</ul>
+
+</section>
+<section id="slide-org34b481c">
+<h4 id="org34b481c">Org-mode Workshop</h4>
+<ul>
+<li><a href="https://github.com/nickanderson/org-mode-workshop">https://github.com/nickanderson/org-mode-workshop</a></li>
+
+</ul>
+
+</section>
+<section id="slide-orgc7f2ac8">
+<h4 id="orgc7f2ac8">Level up your notes with org-mode</h4>
+<ul>
+<li><a href="https://github.com/nickanderson/Level-up-your-notes-with-Org">https://github.com/nickanderson/Level-up-your-notes-with-Org</a></li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<p> Created by Kristian Amlie &amp; Nick Anderson </p>
+<script src="file:///home/nickanderson/src/reveal.js/lib/js/head.min.js"></script>
+<script src="file:///home/nickanderson/src/reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c/t',
+rollingLinks: true,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'slide', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'file:///home/nickanderson/src/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'file:///home/nickanderson/src/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'file:///home/nickanderson/src/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'file:///home/nickanderson/src/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+]
+});
+</script>
+</body>
+</html>

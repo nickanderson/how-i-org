@@ -1,0 +1,218 @@
+#+Title: How I Org
+#+Author: Kristian Amlie & Nick Anderson
+#+Subtitle: Northern.tech winter summit 2018
+#+REVEAL_HEAD_PREAMBLE: <meta name="description" content="How to organize yourself">
+#+REVEAL_HLEVEL: 2
+#+REVEAL_PLUGINS: (markdown notes highlight print-pdf)
+#+REVEAL_POSTAMBLE: <p> Created by %a </p>
+#+REVEAL_ROOT: file:///home/nickanderson/src/reveal.js/
+#+REVEAL_THEME: white
+#+REVEAL_TRANS: slide 
+#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:nil reveal_control:t
+#+OPTIONS: reveal_rolling_links:t reveal_keyboard:t reveal_overview:t num:nil
+#+OPTIONS: reveal_single_file:nil
+#+OPTIONS: reveal_title_slide:"<h2>%t</h2><h3>%d</h3><h4>%s</h4>" 
+#+OPTIONS: toc:nil tags:nil reveal_slide_number:c/t 
+#+EXCLUDE_TAGS: noexport
+
+* 30k foot view
+- The master of time boxing
+- Prioritization maestro
+- The most disciplined man in the world
+ 
+Kristian
+
+* Tooling
+:PROPERTIES:
+:ID:       175015ae-14e0-4545-9d7c-3308d0a8f55f
+:Attachments: 6163066070_c71b223d09_b_d_2018-02-23_12-24-00.jpg
+:END:
+
+#+DOWNLOADED: https://farm7.staticflickr.com/6180/6163066070_c71b223d09_b_d.jpg @ 2018-02-23 12:24:00
+#+ATTR_HTML: :width 100%
+file:data/17/5015ae-14e0-4545-9d7c-3308d0a8f55f/6163066070_c71b223d09_b_d_2018-02-23_12-24-00.jpg
+
+#+BEGIN_NOTES
+  # +DOWNLOADED: https://farm7.staticflickr.com/6180/6163066070_c71b223d09_b_d.jpg @ 2018-02-23 12:24:00
+  
+  I spend the majority of my writing time inside of org-mode. I usually export
+  my org formatted text to html, markdown, or jira.
+  
+  The center of my org is =refile.org=. This is where my org notes started when
+  I first started playing with orgmode about 8 years ago when I first discovered
+  org-mode and was reading [[http://doc.norang.ca/org-mode.html][Organize Your Life In Plain Text!]]
+#+END_NOTES
+
+** Spacemacs :ATTACH:
+:PROPERTIES:
+:ID:       9b0aa346-f8b4-4880-92bc-cd9886ce64fe
+:Attachments: spacemacs-logo_2018-02-23_12-27-45.svg 687474703a2f2f7777772e6e61737333722e636f6d2f73706163656d6163732e706e67_2018-02-23_12-30-12.png
+:END:
+
+
+#+DOWNLOADED: https://raw.githubusercontent.com/nashamri/spacemacs-logo/master/spacemacs-logo.svg @ 2018-02-23 12:27:46
+[[file:data/9b/0aa346-f8b4-4880-92bc-cd9886ce64fe/spacemacs-logo_2018-02-23_12-27-45.svg]]
+
+#+BEGIN_NOTES
+  I am a long time vim user and my muscle memory for modal editing is strong.
+  The main reason I kept leaving orgmode was because I was uncomfortable inside
+  emacs. Once I got evil working nicely in emacs org-mode became a central part
+  of my workflow.
+  
+  I switched to spacemacs in 2016 which greatly simplified my emacs
+  configuration and made integrating orgmode into more areas of my workflow.
+#+END_NOTES
+
+* Features
+** Markup
+
+#+ATTR_REVEAL: :frag (appear) 
+- Similar to markdown
+#+ATTR_REVEAL: :frag (appear) 
+  - Slightly less readable (more options)
+
+#+ATTR_REVEAL: :frag (appear) 
+- Fair support rendering in github/gitlab
+
+#+ATTR_REVEAL: :frag (appear) 
+- TROLLING [[http://karl-voit.at/2017/09/23/orgmode-as-markup-only/][The most reasonable markup language for text]]?
+
+*** Org Markup Example
+
+#+BEGIN_EXAMPLE
+  * Headings start with a star
+  
+  ** Subheadings start with 2 stars
+
+  Text can be *bold*, /italic/, +struk through+ or =verbatium=.
+
+  ,#+BEGIN_EXAMPLE
+  You can have verbatium blocks
+  ,#+END_EXAMPLE
+
+  : This is another way to do verbatium blocks
+  : I prefer the BEGIN/END style because of easy templates
+  : <s, <e, <q
+#+END_EXAMPLE
+
+** Inline Code Execution
+
+Execute code blocks (shell, python, [[https://github.com/nickanderson/ob-cfengine3][CFEngine 3]]) directly inline
+
+*** Shell
+
+#+Caption: Executing a shell block
+#+BEGIN_SRC shell :exports both
+  echo Hello World
+#+END_SRC
+
+#+Caption: Results from executing a shell block
+#+RESULTS:
+: Hello World
+
+*** Python
+
+#+BEGIN_EXAMPLE
+#+Caption: Executing a python block
+#+BEGIN_SRC python :exports both :results output
+  print("Hello World")
+#+END_SRC
+#+END_EXAMPLE
+
+#+Caption: Executing a python block
+#+BEGIN_SRC python :exports both :results output
+  print("Hello World")
+#+END_SRC
+
+#+Caption: Results from executing a python block
+#+RESULTS:
+: Hello World
+
+*** CFEngine 3
+
+#+BEGIN_EXAMPLE
+#+Caption: Executing a CFEngine 3 policy block
+#+BEGIN_SRC cfengine3 :exports both :include-stdlib no
+  bundle agent main
+  {
+    reports: "Hello World";
+  }
+#+END_SRC
+#+END_EXAMPLE
+
+#+Caption: Executing a CFEngine 3 policy block
+#+BEGIN_SRC cfengine3 :exports both :include-stdlib no
+  bundle agent main
+  {
+    reports: "Hello World";
+  }
+#+END_SRC
+
+#+Caption: Results from executing a CFEngine 3 policy block
+#+RESULTS:
+: R: Hello World
+
+*** Remote execution
+
+#+BEGIN_EXAMPLE
+#+Caption: Execute commands on a remote host
+#+BEGIN_SRC sh :dir /ssh:cmdln@direct.cmdln.org: :results output
+  hostname
+  uname -a 
+#+END_SRC
+#+END_EXAMPLE
+
+#+Caption: Execute commands on a remote host
+#+BEGIN_SRC sh :dir /ssh:cmdln@direct.cmdln.org: :results output
+  hostname
+  uname -a 
+#+END_SRC
+
+#+Caption: Results from executing commands on a remote host
+#+RESULTS:
+: ginger.pilgrimpage.com
+: Linux ginger.pilgrimpage.com 2.6.18-308.24.1.el5xen #1 SMP Tue Dec 4 18:33:26 EST 2012 x86_64 x86_64 x86_64 GNU/Linux
+
+** GTD
+*** Capturing
+*** Time Tracking
+*** TODOs
+*** Jira
+
+#+ATTR_REVEAL: :frag (appear) 
+- ~org-jira-get-issue~
+- ~org-jira-create-issue~
+- ~org-jira-todo-to-jira~
+- ~org-jira-browse-issue~
+- ~org-jira-update-comment~
+
+** Remembering
+*** Notes
+*** Journaling
+*** Cross References
+  
+** Terminals
+** Magical Magit
+** Communicating
+*** Email
+*** Presentations
+*** Chat
+*** Blogging
+
+** Additional References
+
+Some good resources to explore.
+
+*** Literate DevOps
+
+- http://www.howardism.org/Technical/Emacs/literate-devops.html
+- http://www.howardism.org/Technical/Emacs/literate-devops-examples.html
+- https://www.youtube.com/watch?v=dljNabciEGg
+
+*** Org-mode Workshop
+
+- https://github.com/nickanderson/org-mode-workshop
+
+*** Level up your notes with org-mode
+
+- https://github.com/nickanderson/Level-up-your-notes-with-Org 
