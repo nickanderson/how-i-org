@@ -176,6 +176,11 @@ Execute code blocks (shell, python, [[https://github.com/nickanderson/ob-cfengin
 ** GTD
 *** TODOs
 *** Agenda
+
+[[file:data/screencasts/NT-how-i-org-agenda.webm][DEMO]]
+
+Find what your working on now, and what you might work on next
+
 *** Time Tracking
 :LOGBOOK:
 CLOCK: [2018-02-26 Mon 10:44]--[2018-02-26 Mon 10:46] =>  0:02
@@ -202,12 +207,14 @@ CLOCK: [2018-02-26 Mon 10:44]--[2018-02-26 Mon 10:46] =>  0:02
 [[file:data/screencasts/NT-how-i-org-capture.webm][DEMO]]
 
 #+BEGIN_NOTES
-  - Quickly capture new work
+  - Quickly capture new work (Capture Templates)
   - Be as un-obtrusive as possible
   - Automatically clock time!
 #+END_NOTES
 
 *** Jira
+
+[[file:data/screencasts/NT-how-i-org-jira.webm][DEMO]]
 
 #+ATTR_REVEAL: :frag (appear) 
 - ~org-jira-get-issue~
@@ -215,6 +222,17 @@ CLOCK: [2018-02-26 Mon 10:44]--[2018-02-26 Mon 10:46] =>  0:02
 - ~org-jira-todo-to-jira~
 - ~org-jira-browse-issue~
 - ~org-jira-update-comment~
+
+#+BEGIN_SRC 
+   - =(setq org-clock-idle-time 15)= :: Helps to avoid dangling clocks.
+   - =(org-clock-continuously t)= :: Always clock in from the last clock.
+#+END_SRC
+
+*** Focusing
+[[file:data/screencasts/NT-how-i-org-focus.webm][DEMO]]
+- ~org-narrow-to-subtree~ :: Narrow the file buffer to the current subtree.
+- ~org-tree-to-indirect-buffer~ :: Create a new isolated buffer with the current
+     subtree. Allows for side-by-side editing in same file.
 
 ** Remembering
 *** Notes
