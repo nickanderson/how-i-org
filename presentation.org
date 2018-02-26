@@ -188,6 +188,7 @@ CLOCK: [2018-02-26 Mon 10:44]--[2018-02-26 Mon 10:46] =>  0:02
 - ~org-clock-in~ :: Start the timer
 - ~org-clock-out~ :: End the current timer
 - ~org-clock-goto~ :: Jump to the current, or last timer
+
 *** Reporting clocked time
 - ~org-clock-report~ :: Produce a report of clocked time
 
@@ -241,6 +242,13 @@ CLOCK: [2018-02-26 Mon 10:44]--[2018-02-26 Mon 10:46] =>  0:02
   
 ** Terminals
 ** Magical Magit
+
+Working with git.
+
+- ~magit-status~
+
+- You can even rebase and squash
+
 ** Communicating
 *** Email
 *** Presentations
