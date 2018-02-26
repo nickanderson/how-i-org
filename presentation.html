@@ -31,8 +31,8 @@
 </section>
 
 <section>
-<section id="slide-org2ef72d2">
-<h2 id="org2ef72d2">30k foot view</h2>
+<section id="slide-org840252b">
+<h2 id="org840252b">30k foot view</h2>
 <ul>
 <li>The master of time boxing</li>
 <li>Prioritization maestro</li>
@@ -47,8 +47,8 @@ Kristian
 </section>
 </section>
 <section>
-<section id="slide-orgcd3a50d">
-<h2 id="orgcd3a50d"><a id="ID-175015ae-14e0-4545-9d7c-3308d0a8f55f"></a>Tooling</h2>
+<section id="slide-org43d59e9">
+<h2 id="org43d59e9"><a id="ID-175015ae-14e0-4545-9d7c-3308d0a8f55f"></a>Tooling</h2>
 
 <div class="figure">
 <p><img src="data/17/5015ae-14e0-4545-9d7c-3308d0a8f55f/6163066070_c71b223d09_b_d_2018-02-23_12-24-00.jpg" alt="6163066070_c71b223d09_b_d_2018-02-23_12-24-00.jpg" width="100%" />
@@ -72,8 +72,8 @@ org-mode and was reading <a href="http://doc.norang.ca/org-mode.html">Organize Y
 </section>
 </section>
 <section>
-<section id="slide-org583fb1f">
-<h3 id="org583fb1f"><a id="ID-9b0aa346-f8b4-4880-92bc-cd9886ce64fe"></a>Spacemacs</h3>
+<section id="slide-orgb4d837e">
+<h3 id="orgb4d837e"><a id="ID-9b0aa346-f8b4-4880-92bc-cd9886ce64fe"></a>Spacemacs</h3>
 
 <div class="figure">
 <p><object type="image/svg+xml" data="data/9b/0aa346-f8b4-4880-92bc-cd9886ce64fe/spacemacs-logo_2018-02-23_12-27-45.svg" class="org-svg">
@@ -99,15 +99,15 @@ configuration and made integrating orgmode into more areas of my workflow.
 </section>
 </section>
 <section>
-<section id="slide-org359a220">
-<h2 id="org359a220">Features</h2>
-<div class="outline-text-2" id="text-org359a220">
+<section id="slide-org1cf3d11">
+<h2 id="org1cf3d11">Features</h2>
+<div class="outline-text-2" id="text-org1cf3d11">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org326f746">
-<h3 id="org326f746">Markup</h3>
+<section id="slide-org5095d54">
+<h3 id="org5095d54">Markup</h3>
 <ul>
 <li class="fragment appear">Similar to markdown</li>
 
@@ -128,8 +128,8 @@ configuration and made integrating orgmode into more areas of my workflow.
 </ul>
 
 </section>
-<section id="slide-org32c525f">
-<h4 id="org32c525f">Org Markup Example</h4>
+<section id="slide-org3f7aeea">
+<h4 id="org3f7aeea">Org Markup Example</h4>
 <pre class="example">
 * Headings start with a star
 
@@ -149,15 +149,15 @@ You can have verbatium blocks
 </section>
 </section>
 <section>
-<section id="slide-org043aec2">
-<h3 id="org043aec2">Inline Code Execution</h3>
+<section id="slide-org62b32df">
+<h3 id="org62b32df">Inline Code Execution</h3>
 <p>
 Execute code blocks (shell, python, <a href="https://github.com/nickanderson/ob-cfengine3">CFEngine 3</a>) directly inline
 </p>
 
 </section>
-<section id="slide-orgb8fcb24">
-<h4 id="orgb8fcb24">Shell</h4>
+<section id="slide-org79bce88">
+<h4 id="org79bce88">Shell</h4>
 <div class="org-src-container">
 <label class="org-src-name">Executing a shell block</label>
 <pre><code class="shell" >echo Hello World
@@ -170,8 +170,8 @@ Hello World
 </pre>
 
 </section>
-<section id="slide-orgc82f52d">
-<h4 id="orgc82f52d">Python</h4>
+<section id="slide-orgf80741a">
+<h4 id="orgf80741a">Python</h4>
 <pre class="example">
 #+Caption: Executing a python block
 #+BEGIN_SRC python :exports both :results output
@@ -179,14 +179,30 @@ Hello World
 #+END_SRC
 </pre>
 
+<div class="org-src-container">
+<label class="org-src-name">Executing a python block</label>
+<pre><code class="python" >print("Hello World")
+</code></pre>
+</div>
+
 <pre class="example">
 Hello World
 
 </pre>
 
 </section>
-<section id="slide-org063d790">
-<h4 id="org063d790">CFEngine 3</h4>
+<section id="slide-org72698d1">
+<h4 id="org72698d1">CFEngine 3</h4>
+<pre class="example">
+#+Caption: Executing a CFEngine 3 policy block
+#+BEGIN_SRC cfengine3 :exports both :include-stdlib no
+  bundle agent main
+  {
+    reports: "Hello World";
+  }
+#+END_SRC
+</pre>
+
 <div class="org-src-container">
 <label class="org-src-name">Executing a CFEngine 3 policy block</label>
 <pre><code class="cfengine3" >bundle agent main
@@ -202,10 +218,18 @@ R: Hello World
 </pre>
 
 </section>
-<section id="slide-org457dd96">
-<h4 id="org457dd96">Remote execution</h4>
-<div class="org-src-container">
+<section id="slide-orgf3c099d">
+<h4 id="orgf3c099d">Remote execution</h4>
+<pre class="example">
+#+Caption: Execute commands on a remote host
+#+BEGIN_SRC sh :dir /ssh:cmdln@direct.cmdln.org: :results output
+  hostname
+  uname -a 
+#+END_SRC
+</pre>
 
+<div class="org-src-container">
+<label class="org-src-name">Execute commands on a remote host</label>
 <pre><code class="sh" >hostname
 uname -a 
 </code></pre>
@@ -214,22 +238,81 @@ uname -a
 </section>
 </section>
 <section>
-<section id="slide-org9fa9576">
-<h3 id="org9fa9576">GTD</h3>
-<div class="outline-text-3" id="text-org9fa9576">
+<section id="slide-orgb5e58c2">
+<h3 id="orgb5e58c2">GTD</h3>
+<div class="outline-text-3" id="text-orgb5e58c2">
 </div>
 </section>
-<section id="slide-org8fcb9d3">
-<h4 id="org8fcb9d3">Capturing</h4>
+<section id="slide-orgf409371">
+<h4 id="orgf409371"><span class="todo TODO">TODO</span> s</h4>
 </section>
-<section id="slide-orgcc62626">
-<h4 id="orgcc62626">Time Tracking</h4>
+<section id="slide-org1d37b7a">
+<h4 id="org1d37b7a">Agenda</h4>
+
 </section>
-<section id="slide-orgd76a2b5">
-<h4 id="orgd76a2b5"><span class="todo TODO">TODO</span> s</h4>
+<section id="slide-org8a2d6b4">
+<h4 id="org8a2d6b4">Time Tracking</h4>
+<dl>
+<dt><code>org-clock-in</code></dt><dd>Start the timer</dd>
+<dt><code>org-clock-out</code></dt><dd>End the current timer</dd>
+<dt><code>org-clock-goto</code></dt><dd>Jump to the current, or last timer</dd>
+
+</dl>
+
 </section>
-<section id="slide-orgcebb025">
-<h4 id="orgcebb025">Jira</h4>
+<section id="slide-org8c92a96">
+<h4 id="org8c92a96">Reporting clocked time</h4>
+<dl>
+<dt><code>org-clock-report</code></dt><dd>Produce a report of clocked time</dd>
+
+</dl>
+
+<pre class="example">
+#+BEGIN: clocktable :emphasize nil :scope subtree
+#+END: clocktable
+</pre>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 1:</span> Clock summary at <span class="timestamp-wrapper"><span class="timestamp">[2018-02-26 Mon 10:47]</span></span></caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>0:02</b></td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="slide-org1bf68b6">
+<h4 id="org1bf68b6">Capturing</h4>
+<p>
+<a href="data/screencasts/NT-how-i-org-capture.webm">DEMO</a>
+</p>
+
+<aside class="notes">
+<ul>
+<li>Quickly capture new work</li>
+<li>Be as un-obtrusive as possible</li>
+
+</ul>
+
+</aside>
+
+</section>
+<section id="slide-org811c87f">
+<h4 id="org811c87f">Jira</h4>
 <ul>
 <li class="fragment appear"><code>org-jira-get-issue</code></li>
 <li class="fragment appear"><code>org-jira-create-issue</code></li>
@@ -242,62 +325,62 @@ uname -a
 </section>
 </section>
 <section>
-<section id="slide-org9f341fe">
-<h3 id="org9f341fe">Remembering</h3>
-<div class="outline-text-3" id="text-org9f341fe">
+<section id="slide-org4f7898a">
+<h3 id="org4f7898a">Remembering</h3>
+<div class="outline-text-3" id="text-org4f7898a">
 </div>
 </section>
-<section id="slide-orgffe43aa">
-<h4 id="orgffe43aa">Notes</h4>
+<section id="slide-orgb0b654d">
+<h4 id="orgb0b654d">Notes</h4>
 </section>
-<section id="slide-orga7b5f26">
-<h4 id="orga7b5f26">Journaling</h4>
+<section id="slide-org5e3b7f3">
+<h4 id="org5e3b7f3">Journaling</h4>
 </section>
-<section id="slide-org5de9bc6">
-<h4 id="org5de9bc6">Cross References</h4>
+<section id="slide-orgf515c3c">
+<h4 id="orgf515c3c">Cross References</h4>
 
 </section>
 </section>
 <section>
-<section id="slide-orgb6b1ce7">
-<h3 id="orgb6b1ce7">Terminals</h3>
+<section id="slide-orgb829bca">
+<h3 id="orgb829bca">Terminals</h3>
 </section>
 </section>
 <section>
-<section id="slide-orgf8fc0c7">
-<h3 id="orgf8fc0c7">Magical Magit</h3>
+<section id="slide-org03e2605">
+<h3 id="org03e2605">Magical Magit</h3>
 </section>
 </section>
 <section>
-<section id="slide-org753e899">
-<h3 id="org753e899">Communicating</h3>
-<div class="outline-text-3" id="text-org753e899">
+<section id="slide-orgb3ee42c">
+<h3 id="orgb3ee42c">Communicating</h3>
+<div class="outline-text-3" id="text-orgb3ee42c">
 </div>
 </section>
-<section id="slide-org2ab6b28">
-<h4 id="org2ab6b28">Email</h4>
+<section id="slide-org2ce48c3">
+<h4 id="org2ce48c3">Email</h4>
 </section>
-<section id="slide-org6558fdb">
-<h4 id="org6558fdb">Presentations</h4>
+<section id="slide-org185de94">
+<h4 id="org185de94">Presentations</h4>
 </section>
-<section id="slide-org76b6ec6">
-<h4 id="org76b6ec6">Chat</h4>
+<section id="slide-org85f4f21">
+<h4 id="org85f4f21">Chat</h4>
 </section>
-<section id="slide-orgaba8ef2">
-<h4 id="orgaba8ef2">Blogging</h4>
+<section id="slide-org4a6ee73">
+<h4 id="org4a6ee73">Blogging</h4>
 
 </section>
 </section>
 <section>
-<section id="slide-orgb0f83f6">
-<h3 id="orgb0f83f6">Additional References</h3>
+<section id="slide-org7f6b978">
+<h3 id="org7f6b978">Additional References</h3>
 <p>
 Some good resources to explore.
 </p>
 
 </section>
-<section id="slide-orgb129ba5">
-<h4 id="orgb129ba5">Literate DevOps</h4>
+<section id="slide-orgd31cde6">
+<h4 id="orgd31cde6">Literate DevOps</h4>
 <ul>
 <li><a href="http://www.howardism.org/Technical/Emacs/literate-devops.html">http://www.howardism.org/Technical/Emacs/literate-devops.html</a></li>
 <li><a href="http://www.howardism.org/Technical/Emacs/literate-devops-examples.html">http://www.howardism.org/Technical/Emacs/literate-devops-examples.html</a></li>
@@ -306,16 +389,16 @@ Some good resources to explore.
 </ul>
 
 </section>
-<section id="slide-org34b481c">
-<h4 id="org34b481c">Org-mode Workshop</h4>
+<section id="slide-org6f22214">
+<h4 id="org6f22214">Org-mode Workshop</h4>
 <ul>
 <li><a href="https://github.com/nickanderson/org-mode-workshop">https://github.com/nickanderson/org-mode-workshop</a></li>
 
 </ul>
 
 </section>
-<section id="slide-orgc7f2ac8">
-<h4 id="orgc7f2ac8">Level up your notes with org-mode</h4>
+<section id="slide-orgc11e5b6">
+<h4 id="orgc11e5b6">Level up your notes with org-mode</h4>
 <ul>
 <li><a href="https://github.com/nickanderson/Level-up-your-notes-with-Org">https://github.com/nickanderson/Level-up-your-notes-with-Org</a></li>
 

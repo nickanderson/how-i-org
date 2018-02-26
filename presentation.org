@@ -176,16 +176,37 @@ Execute code blocks (shell, python, [[https://github.com/nickanderson/ob-cfengin
 ** GTD
 *** TODOs
 *** Agenda
-
 *** Time Tracking
+:LOGBOOK:
+CLOCK: [2018-02-26 Mon 10:44]--[2018-02-26 Mon 10:46] =>  0:02
+:END:
+- ~org-clock-in~ :: Start the timer
+- ~org-clock-out~ :: End the current timer
+- ~org-clock-goto~ :: Jump to the current, or last timer
+*** Reporting clocked time
+- ~org-clock-report~ :: Produce a report of clocked time
+
+#+BEGIN_EXAMPLE
+  ,#+BEGIN: clocktable :emphasize nil :scope subtree
+  ,#+END: clocktable
+#+END_EXAMPLE
+
+#+CAPTION: Clock summary at [2018-02-26 Mon 10:47]
+| Headline     | Time   |
+|--------------+--------|
+| *Total time* | *0:02* |
+|--------------+--------|
+
 *** Capturing
 
-[[file:data/screencasts/NT-how-i-org-capture.mp4][DEMO]]
+[[file:data/screencasts/NT-how-i-org-capture.webm][DEMO]]
 
 #+BEGIN_NOTES
   - Quickly capture new work
   - Be as un-obtrusive as possible
+  - Automatically clock time!
 #+END_NOTES
+
 *** Jira
 
 #+ATTR_REVEAL: :frag (appear) 
