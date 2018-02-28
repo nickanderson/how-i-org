@@ -96,7 +96,7 @@ file:data/17/5015ae-14e0-4545-9d7c-3308d0a8f55f/6163066070_c71b223d09_b_d_2018-0
 #+END_EXAMPLE
 ** GTD
 *** Task Management
-- Task status (TODO,DONE,IN_PROGRESS,CATNIP)
+- Task status (=TODO=, =DONE=, =IN_PROGRESS=, =CATNIP=)
 - Prioritization
 *** Capturing
 
@@ -107,6 +107,7 @@ file:data/17/5015ae-14e0-4545-9d7c-3308d0a8f55f/6163066070_c71b223d09_b_d_2018-0
   - Be as un-obtrusive as possible
   - Automatically clock time!
 #+END_NOTES
+
 *** Time Tracking
 :LOGBOOK:
 CLOCK: [2018-02-26 Mon 10:44]--[2018-02-26 Mon 10:46] =>  0:02
@@ -114,6 +115,8 @@ CLOCK: [2018-02-26 Mon 10:44]--[2018-02-26 Mon 10:46] =>  0:02
 - ~org-clock-in~ :: Start the timer
 - ~org-clock-out~ :: End the current timer
 - ~org-clock-goto~ :: Jump to the current, or last timer
+- =(setq org-clock-idle-time 15)= :: Helps to avoid dangling clocks.
+- =(setq org-clock-continuously t)= :: Always clock in from the last clock.
 
 *** Reporting clocked time
 - ~org-clock-report~ :: Produce a report of clocked time
@@ -140,7 +143,6 @@ Find what your working on now, and what you might work on next
 - ~org-tree-to-indirect-buffer~ :: Create a new isolated buffer with the current
      subtree. Allows for side-by-side editing in same file.
 
-
 ** Icing
 
 The many other small things that converge to make an amazing environment.
@@ -149,16 +151,20 @@ The many other small things that converge to make an amazing environment.
 
 Execute code blocks (shell, python, [[https://github.com/nickanderson/ob-cfengine3][CFEngine 3]]) directly inline
 
+[[file:data/screencasts/NT-how-i-org-exececute-inline-code.webm][DEMO]]
+
 *** Shell
 
 #+Caption: Executing a shell block
-#+BEGIN_SRC shell :exports both
+#+BEGIN_SRC shell :exports both :results output
   echo Hello World
+  date
 #+END_SRC
 
 #+Caption: Results from executing a shell block
 #+RESULTS:
 : Hello World
+: Wed Feb 28 11:58:57 CST 2018
 
 *** Python
 
@@ -171,12 +177,12 @@ Execute code blocks (shell, python, [[https://github.com/nickanderson/ob-cfengin
 
 #+Caption: Executing a python block
 #+BEGIN_SRC python :exports both :results output
-  print("Hello World")
+  print("Hello Everybody")
 #+END_SRC
 
 #+Caption: Results from executing a python block
 #+RESULTS:
-: Hello World
+: Hello Everybody
 
 *** CFEngine 3
 
@@ -194,13 +200,13 @@ Execute code blocks (shell, python, [[https://github.com/nickanderson/ob-cfengin
 #+BEGIN_SRC cfengine3 :exports both :include-stdlib no
   bundle agent main
   {
-    reports: "Hello World";
+    reports: "Hello World $(sys.date)";
   }
 #+END_SRC
 
 #+Caption: Results from executing a CFEngine 3 policy block
 #+RESULTS:
-: R: Hello World
+: R: Hello World Wed Feb 28 11:59:25 2018
 
 *** Remote execution
 
@@ -225,10 +231,15 @@ Execute code blocks (shell, python, [[https://github.com/nickanderson/ob-cfengin
 
 ** Sharing is caring 
 
-- org-export
-- SPC eemM
-- SPC eetA
-- 
+[[file:data/screencasts/NT-how-i-export.webm][DEMO]]
+
+- =ox-jira= :: Jira
+- =ox-ascii= :: Ascii
+- =ox-md= :: Markdown
+- =ox-odt= :: Open Document
+- =ox-latex= :: LaTeX and PDF
+- =org-export-dispatch= :: Choose your export format
+- =ox-publish= :: Export many files at once
 
 ** Magical Magit
 
@@ -236,11 +247,20 @@ Execute code blocks (shell, python, [[https://github.com/nickanderson/ob-cfengin
 
 - ~magit-status~
 
+#+BEGIN_NOTES
+  - Branching
+  - Fetching/Pulling
+  - Commiting
+  - Rebasing
+  - Pushing
+  - Pull Requests
+#+END_NOTES
 
 ** Remember all the things
-*** Notes
-*** Journaling
-*** Cross References
+- =deft= is like Evernote or Google Keep
+- =org-journal=
+- Automatic cross reference with =org-capture= templates
+ 
 ** Communicating
 *** Email
 
@@ -253,6 +273,12 @@ Execute code blocks (shell, python, [[https://github.com/nickanderson/ob-cfengin
 - org-mode integration
 
 *** Presentations
+- =org-present=
+  - Present from inside org-mode (each slide is a top level heading)
+- =org-beamer=
+  - Export slide deck
+- =org-reveal=
+  - Export beautiful reveal.js deck
 *** Chat
 
 [[file:data/screencasts/NT-how-i-org-chat.webm][DEMO]]
@@ -263,7 +289,10 @@ Execute code blocks (shell, python, [[https://github.com/nickanderson/ob-cfengin
 Currently using both via weechat.
 ** On the go with Android
 - mobile-org
-- Orgzly
+- [[http://www.orgzly.com/][Orgzly]]
+  - Native Dropbox support
+  - I use Synthing instead
+  - I only write to ONE file from mobile
 
 ** Jira
 
@@ -276,15 +305,13 @@ Currently using both via weechat.
 - ~org-jira-browse-issue~
 - ~org-jira-update-comment~
 
-#+BEGIN_SRC 
-   - =(setq org-clock-idle-time 15)= :: Helps to avoid dangling clocks.
-   - =(org-clock-continuously t)= :: Always clock in from the last clock.
-#+END_SRC
 ** Terminals
 
-- ~vagrant-tramp-term~
+[[file:data/screencasts/NT-how-i-terminal.webm][DEMO]]
+
 - ~eshell~
 - ~term~
+- ~vagrant-tramp-term~
 
 * Additional References
 

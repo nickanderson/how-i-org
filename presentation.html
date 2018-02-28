@@ -31,8 +31,8 @@
 </section>
 
 <section>
-<section id="slide-org840252b">
-<h2 id="org840252b">30k foot view</h2>
+<section id="slide-orgfcacc71">
+<h2 id="orgfcacc71">30k foot view</h2>
 <ul>
 <li>The master of time boxing</li>
 <li>Prioritization maestro</li>
@@ -47,8 +47,8 @@ Kristian
 </section>
 </section>
 <section>
-<section id="slide-org43d59e9">
-<h2 id="org43d59e9"><a id="ID-175015ae-14e0-4545-9d7c-3308d0a8f55f"></a>Tooling</h2>
+<section id="slide-org73e610c">
+<h2 id="org73e610c"><a id="ID-175015ae-14e0-4545-9d7c-3308d0a8f55f"></a>Tooling</h2>
 
 <div class="figure">
 <p><img src="data/17/5015ae-14e0-4545-9d7c-3308d0a8f55f/6163066070_c71b223d09_b_d_2018-02-23_12-24-00.jpg" alt="6163066070_c71b223d09_b_d_2018-02-23_12-24-00.jpg" width="100%" />
@@ -72,8 +72,8 @@ org-mode and was reading <a href="http://doc.norang.ca/org-mode.html">Organize Y
 </section>
 </section>
 <section>
-<section id="slide-orgb4d837e">
-<h3 id="orgb4d837e"><a id="ID-9b0aa346-f8b4-4880-92bc-cd9886ce64fe"></a>Spacemacs</h3>
+<section id="slide-org08feea6">
+<h3 id="org08feea6"><a id="ID-9b0aa346-f8b4-4880-92bc-cd9886ce64fe"></a>Spacemacs</h3>
 
 <div class="figure">
 <p><object type="image/svg+xml" data="data/9b/0aa346-f8b4-4880-92bc-cd9886ce64fe/spacemacs-logo_2018-02-23_12-27-45.svg" class="org-svg">
@@ -99,15 +99,15 @@ configuration and made integrating orgmode into more areas of my workflow.
 </section>
 </section>
 <section>
-<section id="slide-org1cf3d11">
-<h2 id="org1cf3d11">Features</h2>
-<div class="outline-text-2" id="text-org1cf3d11">
+<section id="slide-org45e16e1">
+<h2 id="org45e16e1">Features</h2>
+<div class="outline-text-2" id="text-org45e16e1">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org5095d54">
-<h3 id="org5095d54">Markup</h3>
+<section id="slide-orgd2dfb5a">
+<h3 id="orgd2dfb5a">Markup</h3>
 <ul>
 <li class="fragment appear">Similar to markdown</li>
 
@@ -128,8 +128,8 @@ configuration and made integrating orgmode into more areas of my workflow.
 </ul>
 
 </section>
-<section id="slide-org3f7aeea">
-<h4 id="org3f7aeea">Org Markup Example</h4>
+<section id="slide-org28af345">
+<h4 id="org28af345">Org Markup Example</h4>
 <pre class="example">
 * Headings start with a star
 
@@ -145,123 +145,53 @@ You can have verbatium blocks
 : I prefer the BEGIN/END style because of easy templates
 : &lt;s, &lt;e, &lt;q
 </pre>
-
 </section>
 </section>
 <section>
-<section id="slide-org62b32df">
-<h3 id="org62b32df">Inline Code Execution</h3>
+<section id="slide-org5637cd6">
+<h3 id="org5637cd6">GTD</h3>
+<div class="outline-text-3" id="text-org5637cd6">
+</div>
+</section>
+<section id="slide-org708e08e">
+<h4 id="org708e08e">Task Management</h4>
+<ul>
+<li>Task status (<code>TODO</code>, <code>DONE</code>, <code>IN_PROGRESS</code>, <code>CATNIP</code>)</li>
+<li>Prioritization</li>
+
+</ul>
+</section>
+<section id="slide-org40d0959">
+<h4 id="org40d0959">Capturing</h4>
 <p>
-Execute code blocks (shell, python, <a href="https://github.com/nickanderson/ob-cfengine3">CFEngine 3</a>) directly inline
+<a href="data/screencasts/NT-how-i-org-capture.webm">DEMO</a>
 </p>
 
-</section>
-<section id="slide-org79bce88">
-<h4 id="org79bce88">Shell</h4>
-<div class="org-src-container">
-<label class="org-src-name">Executing a shell block</label>
-<pre><code class="shell" >echo Hello World
-</code></pre>
-</div>
+<aside class="notes">
+<ul>
+<li>Quickly capture new work (Capture Templates)</li>
+<li>Be as un-obtrusive as possible</li>
+<li>Automatically clock time!</li>
 
-<pre class="example">
-Hello World
+</ul>
 
-</pre>
+</aside>
 
 </section>
-<section id="slide-orgf80741a">
-<h4 id="orgf80741a">Python</h4>
-<pre class="example">
-#+Caption: Executing a python block
-#+BEGIN_SRC python :exports both :results output
-  print("Hello World")
-#+END_SRC
-</pre>
-
-<div class="org-src-container">
-<label class="org-src-name">Executing a python block</label>
-<pre><code class="python" >print("Hello World")
-</code></pre>
-</div>
-
-<pre class="example">
-Hello World
-
-</pre>
-
-</section>
-<section id="slide-org72698d1">
-<h4 id="org72698d1">CFEngine 3</h4>
-<pre class="example">
-#+Caption: Executing a CFEngine 3 policy block
-#+BEGIN_SRC cfengine3 :exports both :include-stdlib no
-  bundle agent main
-  {
-    reports: "Hello World";
-  }
-#+END_SRC
-</pre>
-
-<div class="org-src-container">
-<label class="org-src-name">Executing a CFEngine 3 policy block</label>
-<pre><code class="cfengine3" >bundle agent main
-{
-  reports: "Hello World";
-}
-</code></pre>
-</div>
-
-<pre class="example">
-R: Hello World
-
-</pre>
-
-</section>
-<section id="slide-orgf3c099d">
-<h4 id="orgf3c099d">Remote execution</h4>
-<pre class="example">
-#+Caption: Execute commands on a remote host
-#+BEGIN_SRC sh :dir /ssh:cmdln@direct.cmdln.org: :results output
-  hostname
-  uname -a 
-#+END_SRC
-</pre>
-
-<div class="org-src-container">
-<label class="org-src-name">Execute commands on a remote host</label>
-<pre><code class="sh" >hostname
-uname -a 
-</code></pre>
-</div>
-
-</section>
-</section>
-<section>
-<section id="slide-orgb5e58c2">
-<h3 id="orgb5e58c2">GTD</h3>
-<div class="outline-text-3" id="text-orgb5e58c2">
-</div>
-</section>
-<section id="slide-orgf409371">
-<h4 id="orgf409371"><span class="todo TODO">TODO</span> s</h4>
-</section>
-<section id="slide-org1d37b7a">
-<h4 id="org1d37b7a">Agenda</h4>
-
-</section>
-<section id="slide-org8a2d6b4">
-<h4 id="org8a2d6b4">Time Tracking</h4>
+<section id="slide-orgc2067c8">
+<h4 id="orgc2067c8">Time Tracking</h4>
 <dl>
 <dt><code>org-clock-in</code></dt><dd>Start the timer</dd>
 <dt><code>org-clock-out</code></dt><dd>End the current timer</dd>
 <dt><code>org-clock-goto</code></dt><dd>Jump to the current, or last timer</dd>
+<dt><code>(setq org-clock-idle-time 15)</code></dt><dd>Helps to avoid dangling clocks.</dd>
+<dt><code>(setq org-clock-continuously t)</code></dt><dd>Always clock in from the last clock.</dd>
 
 </dl>
 
 </section>
-<section id="slide-org8c92a96">
-<h4 id="org8c92a96">Reporting clocked time</h4>
+<section id="slide-org4548c76">
+<h4 id="org4548c76">Reporting clocked time</h4>
 <dl>
 <dt><code>org-clock-report</code></dt><dd>Produce a report of clocked time</dd>
 
@@ -293,26 +223,282 @@ uname -a
 </tr>
 </tbody>
 </table>
+</section>
+<section id="slide-org8d70007">
+<h4 id="org8d70007">Agenda</h4>
+<p>
+<a href="data/screencasts/NT-how-i-org-agenda.webm">DEMO</a>
+</p>
+
+<p>
+Find what your working on now, and what you might work on next
+</p>
 
 </section>
-<section id="slide-org1bf68b6">
-<h4 id="org1bf68b6">Capturing</h4>
+<section id="slide-org3e0118e">
+<h4 id="org3e0118e">Focusing</h4>
 <p>
-<a href="data/screencasts/NT-how-i-org-capture.webm">DEMO</a>
+<a href="data/screencasts/NT-how-i-org-focus.webm">DEMO</a>
 </p>
+<dl>
+<dt><code>org-narrow-to-subtree</code></dt><dd>Narrow the file buffer to the current subtree.</dd>
+<dt><code>org-tree-to-indirect-buffer</code></dt><dd>Create a new isolated buffer with the current
+subtree. Allows for side-by-side editing in same file.</dd>
+
+</dl>
+
+</section>
+</section>
+<section>
+<section id="slide-orgcdac63b">
+<h3 id="orgcdac63b">Icing</h3>
+<p>
+The many other small things that converge to make an amazing environment.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgc70e9dd">
+<h3 id="orgc70e9dd">Inline code execution</h3>
+<p>
+Execute code blocks (shell, python, <a href="https://github.com/nickanderson/ob-cfengine3">CFEngine 3</a>) directly inline
+</p>
+
+<p>
+<a href="data/screencasts/NT-how-i-org-exececute-inline-code.webm">DEMO</a>
+</p>
+
+</section>
+<section id="slide-org0be7ad1">
+<h4 id="org0be7ad1">Shell</h4>
+<div class="org-src-container">
+<label class="org-src-name">Executing a shell block</label>
+<pre><code class="shell" >echo Hello World
+date
+</code></pre>
+</div>
+
+<pre class="example">
+Hello World
+Wed Feb 28 11:58:57 CST 2018
+
+</pre>
+
+</section>
+<section id="slide-org4b2501f">
+<h4 id="org4b2501f">Python</h4>
+<pre class="example">
+#+Caption: Executing a python block
+#+BEGIN_SRC python :exports both :results output
+  print("Hello World")
+#+END_SRC
+</pre>
+
+<div class="org-src-container">
+<label class="org-src-name">Executing a python block</label>
+<pre><code class="python" >print("Hello Everybody")
+</code></pre>
+</div>
+
+<pre class="example">
+Hello Everybody
+
+</pre>
+
+</section>
+<section id="slide-orgc3d0d61">
+<h4 id="orgc3d0d61">CFEngine 3</h4>
+<pre class="example">
+#+Caption: Executing a CFEngine 3 policy block
+#+BEGIN_SRC cfengine3 :exports both :include-stdlib no
+  bundle agent main
+  {
+    reports: "Hello World";
+  }
+#+END_SRC
+</pre>
+
+<div class="org-src-container">
+<label class="org-src-name">Executing a CFEngine 3 policy block</label>
+<pre><code class="cfengine3" >bundle agent main
+{
+  reports: "Hello World $(sys.date)";
+}
+</code></pre>
+</div>
+
+<pre class="example">
+R: Hello World Wed Feb 28 11:59:25 2018
+
+</pre>
+
+</section>
+<section id="slide-orgd680591">
+<h4 id="orgd680591">Remote execution</h4>
+<pre class="example">
+#+Caption: Execute commands on a remote host
+#+BEGIN_SRC sh :dir /ssh:cmdln@direct.cmdln.org: :results output
+  hostname
+  uname -a 
+#+END_SRC
+</pre>
+
+<div class="org-src-container">
+<label class="org-src-name">Execute commands on a remote host</label>
+<pre><code class="sh" >hostname
+uname -a 
+</code></pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org0b31434">
+<h3 id="org0b31434">Sharing is caring</h3>
+<p>
+<a href="data/screencasts/NT-how-i-export.webm">DEMO</a>
+</p>
+
+<dl>
+<dt><code>ox-jira</code></dt><dd>Jira</dd>
+<dt><code>ox-ascii</code></dt><dd>Ascii</dd>
+<dt><code>ox-md</code></dt><dd>Markdown</dd>
+<dt><code>ox-odt</code></dt><dd>Open Document</dd>
+<dt><code>ox-latex</code></dt><dd>LaTeX and PDF</dd>
+<dt><code>org-export-dispatch</code></dt><dd>Choose your export format</dd>
+<dt><code>ox-publish</code></dt><dd>Export many files at once</dd>
+
+</dl>
+
+</section>
+</section>
+<section>
+<section id="slide-org4ababdf">
+<h3 id="org4ababdf">Magical Magit</h3>
+<p>
+<a href="data/screencasts/NT-how-i-magit.webm">DEMO</a>
+</p>
+
+<ul>
+<li><code>magit-status</code></li>
+
+</ul>
 
 <aside class="notes">
 <ul>
-<li>Quickly capture new work</li>
-<li>Be as un-obtrusive as possible</li>
+<li>Branching</li>
+<li>Fetching/Pulling</li>
+<li>Commiting</li>
+<li>Rebasing</li>
+<li>Pushing</li>
+<li>Pull Requests</li>
 
 </ul>
 
 </aside>
 
 </section>
-<section id="slide-org811c87f">
-<h4 id="org811c87f">Jira</h4>
+</section>
+<section>
+<section id="slide-org7cacf9e">
+<h3 id="org7cacf9e">Remember all the things</h3>
+<ul>
+<li><code>deft</code> is like Evernote or Google Keep</li>
+<li><code>org-journal</code></li>
+<li>Automatic cross reference with <code>org-capture</code> templates</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgc74b128">
+<h3 id="orgc74b128">Communicating</h3>
+<div class="outline-text-3" id="text-orgc74b128">
+</div>
+</section>
+<section id="slide-orga65c7c3">
+<h4 id="orga65c7c3">Email</h4>
+<p>
+<a href="data/screencasts/NT-how-i-org-email.webm">DEMO</a>
+</p>
+
+<ul>
+<li>offline mail
+<ul>
+<li>sending (local postfix server)</li>
+<li>local mail cache</li>
+
+</ul></li>
+<li>fast searching</li>
+<li>org-mode integration</li>
+
+</ul>
+
+</section>
+<section id="slide-orgb123479">
+<h4 id="orgb123479">Presentations</h4>
+<ul>
+<li><code>org-present</code>
+<ul>
+<li>Present from inside org-mode (each slide is a top level heading)</li>
+
+</ul></li>
+<li><code>org-beamer</code>
+<ul>
+<li>Export slide deck</li>
+
+</ul></li>
+<li><code>org-reveal</code>
+<ul>
+<li>Export beautiful reveal.js deck</li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-org00c39df">
+<h4 id="org00c39df">Chat</h4>
+<p>
+<a href="data/screencasts/NT-how-i-org-chat.webm">DEMO</a>
+</p>
+
+<ul>
+<li>IRC</li>
+<li>Slack</li>
+
+</ul>
+
+<p>
+Currently using both via weechat.
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org497dc72">
+<h3 id="org497dc72">On the go with Android</h3>
+<ul>
+<li>mobile-org</li>
+<li><a href="http://www.orgzly.com/">Orgzly</a>
+<ul>
+<li>Native Dropbox support</li>
+<li>I use Synthing instead</li>
+<li>I only write to ONE file from mobile</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org6de74f9">
+<h3 id="org6de74f9">Jira</h3>
+<p>
+<a href="data/screencasts/NT-how-i-org-jira.webm">DEMO</a>
+</p>
+
 <ul>
 <li class="fragment appear"><code>org-jira-get-issue</code></li>
 <li class="fragment appear"><code>org-jira-create-issue</code></li>
@@ -325,62 +511,31 @@ uname -a
 </section>
 </section>
 <section>
-<section id="slide-org4f7898a">
-<h3 id="org4f7898a">Remembering</h3>
-<div class="outline-text-3" id="text-org4f7898a">
-</div>
-</section>
-<section id="slide-orgb0b654d">
-<h4 id="orgb0b654d">Notes</h4>
-</section>
-<section id="slide-org5e3b7f3">
-<h4 id="org5e3b7f3">Journaling</h4>
-</section>
-<section id="slide-orgf515c3c">
-<h4 id="orgf515c3c">Cross References</h4>
+<section id="slide-org78a2a0f">
+<h3 id="org78a2a0f">Terminals</h3>
+<p>
+<a href="data/screencasts/NT-how-i-terminal.webm">DEMO</a>
+</p>
+
+<ul>
+<li><code>eshell</code></li>
+<li><code>term</code></li>
+<li><code>vagrant-tramp-term</code></li>
+
+</ul>
 
 </section>
 </section>
 <section>
-<section id="slide-orgb829bca">
-<h3 id="orgb829bca">Terminals</h3>
-</section>
-</section>
-<section>
-<section id="slide-org03e2605">
-<h3 id="org03e2605">Magical Magit</h3>
-</section>
-</section>
-<section>
-<section id="slide-orgb3ee42c">
-<h3 id="orgb3ee42c">Communicating</h3>
-<div class="outline-text-3" id="text-orgb3ee42c">
-</div>
-</section>
-<section id="slide-org2ce48c3">
-<h4 id="org2ce48c3">Email</h4>
-</section>
-<section id="slide-org185de94">
-<h4 id="org185de94">Presentations</h4>
-</section>
-<section id="slide-org85f4f21">
-<h4 id="org85f4f21">Chat</h4>
-</section>
-<section id="slide-org4a6ee73">
-<h4 id="org4a6ee73">Blogging</h4>
-
-</section>
-</section>
-<section>
-<section id="slide-org7f6b978">
-<h3 id="org7f6b978">Additional References</h3>
+<section id="slide-org4a8f5c1">
+<h2 id="org4a8f5c1">Additional References</h2>
 <p>
 Some good resources to explore.
 </p>
 
 </section>
-<section id="slide-orgd31cde6">
-<h4 id="orgd31cde6">Literate DevOps</h4>
+<section id="slide-org7f2f26e">
+<h4 id="org7f2f26e">Literate DevOps</h4>
 <ul>
 <li><a href="http://www.howardism.org/Technical/Emacs/literate-devops.html">http://www.howardism.org/Technical/Emacs/literate-devops.html</a></li>
 <li><a href="http://www.howardism.org/Technical/Emacs/literate-devops-examples.html">http://www.howardism.org/Technical/Emacs/literate-devops-examples.html</a></li>
@@ -389,16 +544,16 @@ Some good resources to explore.
 </ul>
 
 </section>
-<section id="slide-org6f22214">
-<h4 id="org6f22214">Org-mode Workshop</h4>
+<section id="slide-org0aaa1ef">
+<h4 id="org0aaa1ef">Org-mode Workshop</h4>
 <ul>
 <li><a href="https://github.com/nickanderson/org-mode-workshop">https://github.com/nickanderson/org-mode-workshop</a></li>
 
 </ul>
 
 </section>
-<section id="slide-orgc11e5b6">
-<h4 id="orgc11e5b6">Level up your notes with org-mode</h4>
+<section id="slide-org22cf738">
+<h4 id="org22cf738">Level up your notes with org-mode</h4>
 <ul>
 <li><a href="https://github.com/nickanderson/Level-up-your-notes-with-Org">https://github.com/nickanderson/Level-up-your-notes-with-Org</a></li>
 
