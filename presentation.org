@@ -232,9 +232,10 @@ Execute code blocks (shell, python, [[https://github.com/nickanderson/ob-cfengin
 
 ** Magical Magit
 
-[[file:data/screencasts/NT-how-i-org-magit.webm][DEMO]]
+[[file:data/screencasts/NT-how-i-magit.webm][DEMO]]
 
 - ~magit-status~
+
 
 ** Remember all the things
 *** Notes
