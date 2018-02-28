@@ -3,9 +3,9 @@
 #+Subtitle: Northern.tech winter summit 2018
 #+REVEAL_HEAD_PREAMBLE: <meta name="description" content="How to organize yourself">
 #+REVEAL_HLEVEL: 2
-#+REVEAL_PLUGINS: (markdown notes highlight print-pdf)
+#+REVEAL_PLUGINS: (notes highlight print-pdf)
 #+REVEAL_POSTAMBLE: <p> Created by %a </p>
-#+REVEAL_ROOT: file:///home/nickanderson/src/reveal.js/
+#+REVEAL_ROOT: reveal.js-3.6.0/
 #+REVEAL_THEME: white
 #+REVEAL_TRANS: slide 
 #+OPTIONS: reveal_center:t reveal_progress:t reveal_history:nil reveal_control:t
