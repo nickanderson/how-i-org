@@ -285,7 +285,7 @@ Currently using both via weechat.
 - ~eshell~
 - ~term~
 
-** Additional References
+* Additional References
 
 Some good resources to explore.
 
