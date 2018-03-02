@@ -183,17 +183,29 @@ Execute code blocks (shell, python, [[https://github.com/nickanderson/ob-cfengin
 
 *** Shell
 
+#+BEGIN_EXAMPLE
 #+Caption: Executing a shell block
-#+BEGIN_SRC shell :exports both :results output
-  echo Hello World
+#+BEGIN_SRC shell :exports both :results output :var msg="Hello world"
+  echo $msg
+  date
+#+END_SRC
+#+END_EXAMPLE
+
+#+Caption: Executing a shell block
+#+Name: SHELLEXAMPLE
+#+BEGIN_SRC shell :exports both :results output :var msg="Hello world"
+  echo $msg
   date
 #+END_SRC
 
 #+Caption: Results from executing a shell block
 #+RESULTS:
-: Hello World
-: Wed Feb 28 11:58:57 CST 2018
+: Hello world
+: Thu Mar  1 19:21:05 CST 2018
 
+#+BEGIN_NOTES
+  - You can paramaterize the blocks
+#+END_NOTES
 *** Python
 
 #+BEGIN_EXAMPLE
@@ -235,6 +247,18 @@ Execute code blocks (shell, python, [[https://github.com/nickanderson/ob-cfengin
 #+Caption: Results from executing a CFEngine 3 policy block
 #+RESULTS:
 : R: Hello World Wed Feb 28 11:59:25 2018
+
+*** Reusable code blocks
+
+#+BEGIN_EXAMPLE
+  #+CALL: SHELLEXAMPLE(msg="Remeber the shell block from before?")
+#+END_EXAMPLE
+
+#+CALL: SHELLEXAMPLE(msg="Remeber the shell block from before?")
+
+#+RESULTS:
+: Remeber the shell block from before?
+: Thu Mar  1 19:24:06 CST 2018
 
 *** Remote execution
 
