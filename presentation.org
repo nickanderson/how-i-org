@@ -84,10 +84,10 @@ file:data/17/5015ae-14e0-4545-9d7c-3308d0a8f55f/6163066070_c71b223d09_b_d_2018-0
   
   ** Subheadings start with 2 stars
 
-  Text can be *bold*, /italic/, +struk through+ or =verbatium=.
+  Text can be *bold*, /italic/, +struck through+ or =verbatim=.
 
   ,#+BEGIN_EXAMPLE
-  You can have verbatium blocks
+  You can have verbatim blocks
   ,#+END_EXAMPLE
 
   : This is another way to do verbatium blocks
