@@ -385,6 +385,19 @@ Currently using both via weechat.
 #+TBLFM: @>$2=vsum(@2..@-1)
 #+END_EXAMPLE
  
+** Did I mention literate programming?
+
+- ~org-tangle-file~
+
+#+BEGIN_SRC cfengine3 :tangle tangled.cf
+  bundle agent main
+  {
+      reports:
+        "CFEngine, org-mode, emacs with vimkeybindings";
+        "Oh MY!";
+  }
+#+END_SRC
+
 * Additional References
 
 Some good resources to explore.
