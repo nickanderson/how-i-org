@@ -147,6 +147,34 @@ Find what your working on now, and what you might work on next
 
 The many other small things that converge to make an amazing environment.
 
+** Keeping Secrets                                                   :crypt:
+-----BEGIN PGP MESSAGE-----
+
+hQIMA/jYNcPWXvJ6AQ/9E2T5YIwBQroKZCby/tW2zcQhP/orFInFlltJZZUhWiMN
+ZHGE6tfoRl8CoARXXsQ5X33VLKN8sSuoCn4D95hE0aLLfSXSkNJ0LS1LjSp3z/pU
+SFjg3RAYtrmdlr+0qTeLQdjxb8NVx+KunnniNmxUWjz5cD4h/QZO6kUm90vmNz9e
+3erXTnYv/IVT7Wt5zWh6Q7ROhQVYUdxVxBvIDgrThpPJ2XICK1LRf22GjfcSQITO
+Ld7D4IEx57KxhyTN2aAMjdzY11eUFDAoZW9Ihmc2ilb9fJTI5Unk9+PYkxXvFhbl
+LBHRz75yBF1XXdOqVrJxGhNLnl2R2M/DWuHV2aQH3p97xDpd+heViFvrKBrIquMt
+40c0Jqq6WMSQb+86q/nKCgrOut7g7biniwozdQr/Zrl6FIvtWcSKJOtT8ajvSn8u
+9EuSu85lCBLpqdwNihoH03qBdyNA8apgtm7Vz24tyQBRcIQ+RUCMSa9kElUJbeIB
+dgIu5/eumeWnPhBM9oix7BpsoREle4unmSoILk6zxouaBl0nO9/nBCH6kJwlZP/o
+nJSh1xGWH9mN/4JPk12+VRSYP2+AGRAbY/UhbF5SkPco8gkxQrXvPMYhoGs+baNv
+iiVpoBqO72lsuS2IqJAM1fZpaJ0uvyPPk2y8w6AcCuKFbxjmdkCh4k/pBkp7SMLS
+SQF0hQdBzssXdoh3hzDnk4+m7iZk2jEGp1EIHDLJUWAk9LVzDovIwUBisDV045bZ
+KH7Pb94xkOhGhjeVeUUKV62qra8x7xFD/xw=
+=kEdQ
+-----END PGP MESSAGE-----
+
+** Keeping Secrets
+- That was =org-crypt=, I simply tagged the header with the =crypt= tag.
+- Specify the whole file using a "file variable" header.
+  #+BEGIN_EXAMPLE
+    # -*- epa-file-encrypt-to: ("9274E588E866A10B713C9CCD9EB3AD425D1CCC11", "3427A17A5C1A9F1C07D7C4BFF464407C996AF03F") -*-
+  #+END_EXAMPLE 
+- Simply open a file [[file+emacs:///tmp/something.gpg][/tmp/something.gpg]] type and save. You will be prompted to
+  mark the keys you wish to encrypt for.
+  
 ** Inline code execution
 
 Execute code blocks (shell, python, [[https://github.com/nickanderson/ob-cfengine3][CFEngine 3]]) directly inline
