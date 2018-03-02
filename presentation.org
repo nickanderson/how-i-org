@@ -341,6 +341,26 @@ Currently using both via weechat.
 - ~term~
 - ~vagrant-tramp-term~
 
+** Who needs excel
+
+ Sum the second column ignoring header
+ 
+|-----------+--------------------|
+| Hostname  | Allocated Licenses |
+|-----------+--------------------|
+| prodcfg12 |                 65 |
+| techcfg12 |                 35 |
+| intgcfg12 |                120 |
+| uatcfg12  |                 40 |
+|-----------+--------------------|
+| Total:    |                260 |
+|-----------+--------------------|
+#+TBLFM: @>$2=vsum(@2..@-1)
+
+#+BEGIN_EXAMPLE
+#+TBLFM: @>$2=vsum(@2..@-1)
+#+END_EXAMPLE
+ 
 * Additional References
 
 Some good resources to explore.
